@@ -13,7 +13,7 @@
 				cursor: url("https://cur.cursors-4u.net/ani/ani-1/ani1.ani"), auto;
 				border: 20px dotted #ffff00;
 				padding: 50px;
-				padding-bottom: 100px;
+				padding-bottom: 150px; /* Aumentato per non coprire col marquee */
 			}
 
 			h1 {
@@ -64,6 +64,11 @@
 				font-style: italic;
 			}
 
+			.btn-container {
+				text-align: center;
+				margin-top: 30px;
+			}
+
 			button {
 				background-color: #ff0000;
 				color: #ffff00;
@@ -74,6 +79,19 @@
 				border: 10px outset #00ffff;
 				cursor: pointer;
 				animation: flash 0.5s infinite;
+			}
+
+			/* Stile specifico per il bottone recensioni */
+			.btn-recensioni {
+				background-color: #ff00ff !important;
+				color: #00ff00 !important;
+				border: 10px double #ffffff !important;
+				animation:
+					flash 0.3s infinite,
+					spin 2s linear infinite !important;
+				display: block;
+				margin: 50px auto;
+				text-decoration: none;
 			}
 
 			@keyframes flash {
@@ -88,8 +106,17 @@
 				}
 			}
 
+			@keyframes spin {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+
 			button:hover {
-				transform: scale(1.5);
+				transform: scale(1.5) !important;
 			}
 
 			.marquee-container {
@@ -155,7 +182,10 @@
 
 		<hr />
 
-		<h2>Tutorial: How to install THH</h2>
+		<div class="btn-container">
+			<h2>Tutorial: How to install THH</h2>
+		</div>
+
 		<ol>
 			<li>
 				Scarica il file ZIP in base al tuo sistema operativo tramite i bottoni
@@ -170,22 +200,37 @@
 			<li>Have fun!!!</li>
 		</ol>
 
-		<a
-			href="https://github.com/marco-vidali/the-helping-hand-beta-testers/releases/download/builds/The.Helping.Hand.MacOS.zip"
-			><button>
-				DOWNLOAD THE HELPING HAND FOR MACOS FREE 100% NO VIRUS 2026
-			</button></a
-		>
-		<a
-			href="https://github.com/marco-vidali/the-helping-hand-beta-testers/releases/download/builds/The.Helping.Hand.Windows.zip"
-			><button>download thh for windows with no virus 😎😎😎</button></a
-		>
+		<div class="btn-container">
+			<a
+				href="https://github.com/marco-vidali/the-helping-hand-beta-testers/releases/download/builds/The.Helping.Hand.MacOS.zip"
+			>
+				<button>
+					DOWNLOAD THE HELPING HAND FOR MACOS FREE 100% NO VIRUS 2026
+				</button>
+			</a>
+			<a
+				href="https://github.com/marco-vidali/the-helping-hand-beta-testers/releases/download/builds/The.Helping.Hand.Windows.zip"
+			>
+				<button>download thh for windows with no virus 😎😎😎</button>
+			</a>
+		</div>
+
+		<hr />
+
+		<div class="btn-container">
+			<p>✨✨✨ COSA DICONO DI THE HELPING HAND??? ✨✨✨</p>
+			<a href="recensioni.html">
+				<button class="btn-recensioni">
+					CLICCA QUI PER LEGGERE LE RECENSIONI BELLISSIME!!!! 1!1!11!!
+				</button>
+			</a>
+		</div>
 
 		<div class="marquee-container">
 			<span class="marquee-text">
 				!!! BETA TESTERS WANTED !!! DOWNLOAD THE HELPING HAND !!! BEST GAME EVER
 				!!! SCARICA ORA !!! 100% FREE NO VIRUS NO MALWARE NO SPYWARE NO TROJAN
-				HORSE YES FUN !!!
+				HORSE YES FUN !!! LEGGI LE RECENSIONI!!! LEGGI LE RECENSIONI!!!
 			</span>
 		</div>
 	</body>
